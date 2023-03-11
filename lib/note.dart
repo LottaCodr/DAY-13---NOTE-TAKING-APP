@@ -13,6 +13,14 @@ class Note {
 
   }
 
+  Note copyWith({int? id, String? title, String? content}) {
+    return Note(
+      id: id ?? this.id,
+      title: title ?? this.title,
+      content: content ?? this.content,
+    );
+  }
+
   static Note fromMap( Map<String, dynamic> map) {
     return Note (
       id: map['id'],
